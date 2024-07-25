@@ -8,12 +8,15 @@
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
 function getComputerChoice() {
-    let i = Math.random() * 3;
+    // Allow for three options (0, 1, 2)
+    let i = Math.floor(Math.random() * 3);
 
-    console.log(i);
-
+    // Default to "rock"
     let choice = "rock";
-    if (i >= 33 && i < 67) { choice = "paper"; }
-    else if (i >= 67) { choice = "scissors"; }
-    console.log(choice);
+
+    // Check to see if choice string needs to change
+    if (i == 1) { choice = "paper"; }
+    else if (i == 2) { choice = "scissors"; }
+
+    return choice;
 }
